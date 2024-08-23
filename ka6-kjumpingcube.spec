@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kjumpingcube
 Summary:	kjumpingcube
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1c0ac1d6afe5284657a6b0c83499d597
+# Source0-md5:	14b88b8ad55be6b3a9b0d94c76be5d18
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -49,9 +49,9 @@ consists of squares containing points. Players move by clicking on
 either a vacant square, or on own square.
 
 %description -l pl.UTF-8
-KJumpingcube jest prostą sterowaną rzutami kostką grą taktyczną.
-Pole gry składa się z kwadratów zawierających punkty. Ruchy graczy
-polegają na klikaniu albo w puste, albo we własne kwadraty.
+KJumpingcube jest prostą sterowaną rzutami kostką grą taktyczną. Pole
+gry składa się z kwadratów zawierających punkty. Ruchy graczy polegają
+na klikaniu albo w puste, albo we własne kwadraty.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -88,3 +88,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kjumpingcube
 %{_datadir}/metainfo/org.kde.kjumpingcube.appdata.xml
 %{_datadir}/qlogging-categories6/kjumpingcube.categories
+%{_datadir}/qlogging-categories6/kjumpingcube.renamecategories
